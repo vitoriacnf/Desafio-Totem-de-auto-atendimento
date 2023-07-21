@@ -5,15 +5,17 @@ val carrinho = mutableListOf<Produtos>()
 class Carrinho {
 
     fun adicionarAoCarrinho(carrinho: MutableList<Produtos>, item: Produtos, quantidade: Int) {
-        carrinho.add(Produtos(item.codigo, item.nome, item.preco * quantidade))
+        carrinho.add(Produtos(item.codigo, item.nome, item.preco, quantidade))
     }
 
     fun exibirCarrinho(carrinho: List<Produtos>) {
 
-        println("\n\t\t\tResumo da compra: ")
+        println("\n===============================================================" +
+                "\n\t\t\t\t\tRESUMO DA COMPRA: " )
         carrinho.forEach {
-            println("${it.nome} - Quantidade: ${it.codigo} - Valor Total: R$ ${String.format("%.2f", it.preco)}")
+            println("${it.nome} - Quantidade: ${it.codigo} - Valor: R$ ${String.format("%.2f", it.preco)}")
         }
+        println( "\n===============================================================")
     }
 
     fun editarProdutos() {
