@@ -73,16 +73,17 @@ class Pagamento {
         val data = LocalDate.now()
         println(
             "\n\t\t\t\tNOTA FISCAL" +
-                    "\n$cnpj" +
-                    "\n$data"
+                    "\nCNPJ: $cnpj" +
+                    "\nData da compra: $data"
         )
         carrinho.forEach() {
             println("\n${it.nome}" +
                         "\nID do produto: ${it.codigo}" +
                         "\nQuantidade: ${produtos.quantidade}" +
-                        "\nPreço: R${it.preco}"
+                        "\nPreço: R$${it.preco}"
             )
         }
+            totalCompra(carrinho)
     }
 }
 

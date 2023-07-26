@@ -30,6 +30,10 @@ fun main() {
 
                     Carrinho().adicionarAoCarrinho(carrinho, lanche, produtos.quantidade)
                 }
+                3-> {
+                    println("Finalizando o sistema. Obrigado por usar.")
+                    return
+                }
 
                 2 -> {
                     menuBebida()
@@ -93,6 +97,7 @@ fun main() {
 fun menuPrincipal() {
     val emojiHamburger = "\uD83C\uDF54"
     val emojiBebida = "\uD83C\uDF79"
+
     println(
         "\n===============================================================" +
                 "\n\t\t\tBEM VINDO(A) A LANCHONETE FASTFOOD! " +
@@ -101,7 +106,7 @@ fun menuPrincipal() {
     println(
         "" +
                 "\nQual será seu(s) pedido(s) hoje?\n" +
-                "\n[1]. Lanche$emojiHamburger - [2]. Bebida$emojiBebida"
+                "\n[1]. Lanche$emojiHamburger - [2]. Bebida$emojiBebida "
     )
 }
 

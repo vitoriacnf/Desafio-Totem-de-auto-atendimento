@@ -13,7 +13,7 @@ class Carrinho {
         println("\n===============================================================" +
                 "\n\t\t\t\t\tRESUMO DA COMPRA: " )
         carrinho.forEach {
-            println("${it.nome} - Quantidade: ${it.codigo} - Valor: R$ ${String.format("%.2f", it.preco)}")
+            println("${it.nome} - Quantidade: ${it.quantidade} - Valor: R$ ${String.format("%.2f", it.preco)}")
         }
         println( "\n===============================================================")
     }
