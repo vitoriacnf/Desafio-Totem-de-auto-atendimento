@@ -62,13 +62,13 @@ class Pagamento {
         }
     }
 
-    private fun totalCompra(carrinho: List<Produtos>): Double {
+    fun totalCompra(carrinho: List<Produtos>): Double {
         val total = carrinho.sumOf { it.preco * it.quantidade }
         println("Valot total da compra: R$$total")
         return total
     }
 
-    private fun gerarNotaFiscal(carrinho: List<Produtos>) {
+    fun gerarNotaFiscal(carrinho: List<Produtos>) {
         val cnpj = "65.867.518/0001-72"
         val data = LocalDate.now()
         println(

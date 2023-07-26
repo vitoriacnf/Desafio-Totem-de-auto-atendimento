@@ -30,10 +30,6 @@ fun main() {
 
                     Carrinho().adicionarAoCarrinho(carrinho, lanche, produtos.quantidade)
                 }
-                3-> {
-                    println("Finalizando o sistema. Obrigado por usar.")
-                    return
-                }
 
                 2 -> {
                     menuBebida()
