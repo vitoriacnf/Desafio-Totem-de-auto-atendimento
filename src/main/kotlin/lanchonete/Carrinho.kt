@@ -1,19 +1,19 @@
 package lanchonete
 
-val carrinho = mutableListOf<Produtos>()
+val carrinho = mutableListOf<Produto>()
 
 class Carrinho {
 
-    fun adicionarAoCarrinho(carrinho: MutableList<Produtos>, item: Produtos, quantidade: Int) {
-        carrinho.add(Produtos(item.codigo, item.nome, item.preco, quantidade))
+    fun adicionarAoCarrinho(carrinho: MutableList<Produto>, item: Produto, quantidade: Int) {
+        carrinho.add(Produto(item.codigo, item.nome, item.preco, quantidade))
     }
 
-    fun exibirCarrinho(carrinho: List<Produtos>) {
+    fun exibirCarrinho(carrinho: List<Produto>) {
 
         println("\n===============================================================" +
                 "\n\t\t\t\t\tRESUMO DA COMPRA: " )
         carrinho.forEach {
-            println("${it.nome} - Quantidade: ${it.quantidade} - Valor: R$ ${String.format("%.2f", it.preco)}")
+            println("${it.codigo}.${it.nome} - Quantidade: ${it.quantidade} - Valor unitário: R$ ${String.format("%.2f", it.preco)}")
         }
         println( "\n===============================================================")
     }
